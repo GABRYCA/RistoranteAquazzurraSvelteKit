@@ -1,5 +1,9 @@
 <script>
     import {onMount} from "svelte";
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    import 'aos/dist/aos.css';
+    import AOS from 'aos';
+
 
     onMount(() => {
         // Close navbar when open another page, with animation
