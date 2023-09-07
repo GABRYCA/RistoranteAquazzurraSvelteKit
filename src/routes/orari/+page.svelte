@@ -1,0 +1,149 @@
+<script>
+    import {onMount} from "svelte";
+
+    onMount(() => {
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        for (const tooltipTriggerEl of tooltipTriggerList) {
+            new bootstrap.Tooltip(tooltipTriggerEl)
+        }
+    });
+
+    let hour = new Date().getHours();
+    let openingHour = 8;
+    let closingHour = 22;
+    let isOpen = hour >= openingHour && hour < closingHour;
+    let statusMessage = isOpen ? 'Aperti' : 'Chiusi';
+    let sunIconVisible = isOpen;
+    let moonIconVisible = !isOpen;
+
+    $: {
+        hour = new Date().getHours();
+        isOpen = hour >= openingHour && hour < closingHour;
+        statusMessage = isOpen ? 'Aperti' : 'Chiusi';
+        sunIconVisible = isOpen;
+        moonIconVisible = !isOpen;
+    }
+</script>
+
+<svelte:head>
+    <title>Orari - Ristorante Aquazzurra</title>
+</svelte:head>
+
+<!-- Content -->
+<div class="row mx-3 mx-lg-5 align-content-center">
+    <div class="col px-0">
+
+        <!-- Titolo pagina e orari -->
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center my-4 shadow rounded pt-1 pb-1" data-aos="fade-up"><i class="fas fa-utensils me-2" style="color: #7bb5d3"></i> Orari <i class="fas fa-clock ms-2" style="color: #7bb5d3"></i></h1>
+                <div class="card shadow p-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-body">
+                        <p class="card-text text-center fs-4">Il ristorante è aperto tutti i giorni</p>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <span class="badge bg-success me-2 fs-5">8:00</span>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                            <span class="badge bg-danger ms-2 fs-5">22:00</span>
+                        </div>
+                        <p class="card-text text-center thin-text fs-4">Per prenotare il tuo tavolo, puoi chiamare il numero <br><a class="link-dark text-decoration-none" href="tel:+3903231991099" data-bs-toggle="tooltip" data-bs-placement="top" title="Componi numero">+39 0323 199 1099</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schema orario -->
+        <div class="row">
+            <div class="col">
+                <div class="card shadow p-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4" style="color: white; padding: 0.5rem; border-radius: 0.5rem;">Orari del ristorante</h2>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="circle bg-success" data-aos="zoom-in" data-aos-delay="300"><span class="hour">8</span></div>
+                            <div class="line bg-success" data-aos="slide-right" data-aos-delay="400"></div>
+                            <div class="circle bg-danger" data-aos="zoom-in" data-aos-delay="500"><span class="hour">22</span></div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center mt-3">
+                            <i class="fas fa-sun fa-2x me-3" style="color: #ffc058;" data-aos="fade-right" data-aos-delay="800"></i>
+                            <p class="fs-4 mt-3 text-center thin-text">Aperto dalle 8:00 alle 22:00</p>
+                            <i class="fas fa-moon fa-2x ms-3" style="color: #8ac5ff;" data-aos="fade-left" data-aos-delay="900"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sezione dinamica -->
+        <div class="row">
+            <div class="col">
+                <div class="card shadow p-4 mt-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4" style="background: linear-gradient(to right, #7bb5d3, #a1d8f1); box-shadow: 0 4px 15px rgba(123, 181, 211, 0.6); color: white; padding: 0.5rem; border-radius: 0.5rem;">Stato del ristorante</h2>
+                        <div class="d-flex justify-content-center align-items-center">
+                            {#if sunIconVisible}
+                                <i class="fas fa-sun fa-3x me-3 rounded-5 p-2" style="color: #ffc058;"></i>
+                            {/if}
+                            <p class="fs-4 me-3 mt-3" style="color: {sunIconVisible ? '#8ac5ff' : '#ffc058'}">{statusMessage}</p>
+                            {#if moonIconVisible}
+                                <i class="fas fa-moon fa-3x ms-3 rounded-5 p-2" style="color: #8ac5ff;"></i>
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Disclaimer -->
+        <div class="row">
+            <div class="col">
+                <div class="card shadow p-4 mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4" style="background: linear-gradient(to right, #7bb5d3, #a1d8f1); box-shadow: 0 4px 15px rgba(123, 181, 211, 0.6); color: white; padding: 0.5rem; border-radius: 0.5rem;">Avviso</h2>
+                        <p class="card-text text-center thin-text fs-6">Gli orari e i giorni di apertura del Ristorante Aquazzurra sono soggetti a possibili variazioni in base alle disposizioni governative, alle condizioni meteorologiche, alle festività o ad altri fattori imprevisti. Si consiglia di verificare sempre la disponibilità del ristorante prima di recarsi sul posto o di prenotare il tavolo telefonicamente.</p>
+                        <p class="card-text text-center thin-text fs-6">Il Ristorante Aquazzurra non si assume alcuna responsabilità per eventuali disagi o danni causati da informazioni errate o incomplete riguardanti gli orari e i giorni di apertura. Il ristorante si riserva il diritto di modificare gli orari e i giorni di apertura in qualsiasi momento senza preavviso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .bg-success {
+        background: linear-gradient(to right, #7bb5d3, #a1d8f1);
+    }
+
+    .bg-danger {
+        background: linear-gradient(to right, #a1d8f1, #7bb5d3);
+    }
+
+    h2 {
+        background: linear-gradient(to right, #7bb5d3, #a1d8f1);
+        box-shadow: 0 4px 15px rgba(123, 181, 211, 0.6);
+    }
+
+    #sun-icon, #moon-icon {
+        display: none;
+    }
+
+    @keyframes color-change {
+        0% { background-color: #ffc058; }
+        25% { background-color: #f0f8ff; }
+        50% { background-color: #c6eaf5; }
+        75% { background-color: #a1d8f1; }
+        100% { background-color: #8ac5ff; }
+    }
+
+    #sun-icon, #moon-icon {
+        animation-name: color-change;
+        animation-duration: 24s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+</style>
