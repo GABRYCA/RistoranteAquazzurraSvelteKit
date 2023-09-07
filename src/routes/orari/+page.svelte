@@ -80,18 +80,17 @@
                         <h2 class="text-center mb-4" style="background: linear-gradient(to right, #7bb5d3, #a1d8f1); box-shadow: 0 4px 15px rgba(123, 181, 211, 0.6); color: white; padding: 0.5rem; border-radius: 0.5rem;">Stato del ristorante</h2>
                         <div class="d-flex justify-content-center align-items-center">
                             {#if sunIconVisible}
-                                <i class="fas fa-sun fa-3x me-3 rounded-5 p-2" style="color: #ffc058;"></i>
+                                <i class="fas fa-sun fa-3x me-3 rounded-5 p-2" id="sun-icon" style="color: #ffc058;"></i>
                             {/if}
-                            <p class="fs-4 me-3 mt-3" style="color: {sunIconVisible ? '#8ac5ff' : '#ffc058'}">{statusMessage}</p>
+                            <p class="fs-4 me-3 mt-3" style="color: {sunIconVisible ? '#ffc058' : '#8ac5ff'}">{statusMessage}</p>
                             {#if moonIconVisible}
-                                <i class="fas fa-moon fa-3x ms-3 rounded-5 p-2" style="color: #8ac5ff;"></i>
+                                <i class="fas fa-moon fa-3x ms-3 rounded-5 p-2" id="moon-icon" style="color: #8ac5ff;"></i>
                             {/if}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <!-- Disclaimer -->
         <div class="row">
@@ -111,10 +110,6 @@
 
 <style>
 
-    html, body {
-        overflow-x: hidden;
-    }
-
     .bg-success {
         background: linear-gradient(to right, #7bb5d3, #a1d8f1);
     }
@@ -128,11 +123,7 @@
         box-shadow: 0 4px 15px rgba(123, 181, 211, 0.6);
     }
 
-    #sun-icon, #moon-icon {
-        display: none;
-    }
-
-    @keyframes color-change {
+    @keyframes color-change-sun {
         0% { background-color: #ffc058; }
         25% { background-color: #f0f8ff; }
         50% { background-color: #c6eaf5; }
@@ -140,8 +131,23 @@
         100% { background-color: #8ac5ff; }
     }
 
-    #sun-icon, #moon-icon {
-        animation-name: color-change;
+    @keyframes color-change-moon {
+        0% { background-color: #8ac5ff; }
+        25% { background-color: #a1d8f1; }
+        50% { background-color: #c6eaf5; }
+        75% { background-color: #f0f8ff; }
+        100% { background-color: #ffc058; }
+    }
+
+    #sun-icon {
+        animation-name: color-change-sun;
+        animation-duration: 24s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    #moon-icon {
+        animation-name: color-change-moon;
         animation-duration: 24s;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
