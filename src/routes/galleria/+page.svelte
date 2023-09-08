@@ -12,6 +12,7 @@
 
 <svelte:head>
     <title>Galleria - Ristorante Aquazzurra</title>
+    <meta name="description" content="Scopri immagini e video del nostro ristorante e del bellissimo luogo in cui si trova.">
 </svelte:head>
 
 <!-- Content -->

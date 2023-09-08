@@ -12,6 +12,7 @@
 
 <svelte:head>
     <title>Contatti - Ristorante Aquazzurra</title>
+    <meta name="description" content="Contattaci per prenotare un tavolo o per chiederci informazioni.">
 </svelte:head>
 
 <!-- Content -->

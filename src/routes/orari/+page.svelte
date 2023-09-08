@@ -1,5 +1,6 @@
 <script>
     import {onMount} from "svelte";
+    import { _ } from 'svelte-i18n';
 
     onMount(() => {
         // Init tooltips
@@ -28,6 +29,7 @@
 
 <svelte:head>
     <title>Orari - Ristorante Aquazzurra</title>
+    <meta name="description" content="Orari di apertura del Ristorante Aquazzurra Aquazzurra di Cannobio, sul Lago Maggiore. Il ristorante è aperto tutti i giorni dalle 8:00 alle 22:00.">
 </svelte:head>
 
 <!-- Content -->
