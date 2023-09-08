@@ -1,9 +1,5 @@
 <script>
     import {onMount} from "svelte";
-    import 'bootstrap/dist/css/bootstrap.min.css';
-    import 'aos/dist/aos.css';
-    import AOS from 'aos';
-
 
     onMount(() => {
         // Close navbar when open another page, with animation
@@ -13,10 +9,15 @@
             });
         });
 
+        // Init Bootstrap Tooltip
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Init AOS
         AOS.init({
             once: true,
-            easing: 'ease-in-out',
-            offset: 100,
         });
     });
 </script>
