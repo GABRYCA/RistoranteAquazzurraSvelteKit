@@ -3,4 +3,7 @@ command = "npm run build"
 publish = "build"
 
 [functions]
-includeFiles = ["src/lib/locales/*.json"]
+includeFiles = [
+    "src/lib/locales/it.json",
+    "src/lib/locales/en.json"
+]
