@@ -77,7 +77,7 @@
                                 <h2>Il Ristorante Aquazzurra</h2>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center align-items-center px-0 px-md-auto">
-                                <p class="text-center fs-5">Il Ristorante Aquazzurra è un ristorante situato nel resort Aquazzurra a Cannobio, sul Lago Maggiore. Il ristorante è aperto a tutti, non solo agli ospiti del resort, e offre un'ampia scelta di piatti della cucina italiana, preparati con ingredienti freschi e di qualità. Il ristorante è aperto tutti i giorni, a pranzo e a cena.</p>
+                                <p class="text-center fs-5 thin-text">Il Ristorante Aquazzurra è un ristorante situato nel resort Aquazzurra a Cannobio, sul Lago Maggiore. Il ristorante è aperto a tutti, non solo agli ospiti del resort, e offre un'ampia scelta di piatti della cucina italiana, preparati con ingredienti freschi e di qualità. Il ristorante è aperto tutti i giorni, a pranzo e a cena.</p>
                             </div>
                         </div>
                     </div>
@@ -100,31 +100,31 @@
                     <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/antipasto-optimized.webp'); background-size: cover;">
                         <i class="fas fa-seedling fa-3x bg-light p-4 pb-3 pt-3 rounded-top" style="color: #7BB5D3;"></i>
                         <h4 class="bg-light rounded-top mb-0 pb-2 pt-2">Antipasti</h4>
-                        <p class="bg-light rounded-bottom pb-2 px-2">Scopri i nostri antipasti freschi e gustosi, preparati con ingredienti di stagione e di qualità. Abbiamo una vasta scelta di insalate, verdure, formaggi, salumi e crostini.</p>
+                        <p class="bg-light rounded-bottom pb-2 px-2 thin-text">Scopri i nostri antipasti freschi e gustosi, preparati con ingredienti di stagione e di qualità. Abbiamo una vasta scelta di insalate, verdure, formaggi, salumi e crostini.</p>
                     </div>
                     <!-- Primi -->
                     <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/primo-optimized.webp'); background-size: cover;">
                         <i class="fas fa-concierge-bell fa-3x p-4 pb-3 pt-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
                         <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">Primi</h4>
-                        <p class="bg-white rounded-bottom pb-2 px-2">Non perderti i nostri primi piatti, dal sapore casalingo e ricco di tradizione. Ti proponiamo pasta fresca fatta in casa, risotti cremosi, gnocchi, lasagne e molto altro.</p>
+                        <p class="bg-white rounded-bottom pb-2 px-2 thin-text">Non perderti i nostri primi piatti, dal sapore casalingo e ricco di tradizione. Ti proponiamo pasta fresca fatta in casa, risotti cremosi, gnocchi, lasagne e molto altro.</p>
                     </div>
                     <!-- Secondi -->
                     <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/secondo-optimized.webp'); background-size: cover;">
                         <i class="fas fa-drumstick-bite fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
                         <h4 class="bg-white rounded-top mb-0 pb-2 pt-2 ">Secondi</h4>
-                        <p class="bg-white rounded-bottom pb-2 px-2">Sfiziosi e succulenti, i nostri secondi piatti sapranno soddisfare il tuo appetito. Puoi scegliere tra carne alla griglia, pesce del lago, polpette, arrosti e contorni vari.</p>
+                        <p class="bg-white rounded-bottom pb-2 px-2 thin-text">Sfiziosi e succulenti, i nostri secondi piatti sapranno soddisfare il tuo appetito. Puoi scegliere tra carne alla griglia, pesce del lago, polpette, arrosti e contorni vari.</p>
                     </div>
                     <!-- Dolci -->
                     <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/dolce-optimized.webp'); background-size: cover;">
                         <i class="fas fa-birthday-cake fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
                         <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">Dolci</h4>
-                        <p class="bg-white rounded-bottom pb-2 px-2">Dolcissima tentazione, i nostri dolci sono il modo perfetto per concludere il tuo pasto. Abbiamo torte, gelati, mousse, tiramisù, panna cotta e tante altre delizie.</p>
+                        <p class="bg-white rounded-bottom pb-2 px-2 thin-text">Dolcissima tentazione, i nostri dolci sono il modo perfetto per concludere il tuo pasto. Abbiamo torte, gelati, mousse, tiramisù, panna cotta e tante altre delizie.</p>
                     </div>
                     <!-- Bere -->
                     <div class="col-md-12 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/bere-optimized.webp'); background-size: cover;">
                         <i class="fas fa-wine-glass-alt fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
                         <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">Bere</h4>
-                        <p class="bg-white rounded-bottom pb-2 px-2">Per accompagnare i tuoi piatti, ti offriamo una selezione di vini locali e nazionali, birre artigianali, succhi di frutta, acqua minerale e caffè.</p>
+                        <p class="bg-white rounded-bottom pb-2 px-2 thin-text">Per accompagnare i tuoi piatti, ti offriamo una selezione di vini locali e nazionali, birre artigianali, succhi di frutta, acqua minerale e caffè.</p>
                     </div>
                 </div>
             </div>
