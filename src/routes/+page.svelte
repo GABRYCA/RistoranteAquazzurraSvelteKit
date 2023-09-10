@@ -82,7 +82,8 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-7">
-                        <div class="row p-5 h-100 rounded shadow" style="background-image: url('/media/photos/webp/0010-optimized.webp'); background-size: cover; background-attachment: fixed; background-position: bottom; min-height: 30vh">
+                        <div class="row h-100 rounded shadow">
+                            <img class="img-fluid h-auto p-0 rounded" src="/media/photos/webp/0010-optimized.webp" alt="inside restaurant" style="max-height: 50vh; object-fit: cover; object-position: bottom;">
                         </div>
                     </div>
                 </div>
@@ -93,7 +94,7 @@
         <div class="row mt-4">
             <div class="col" data-aos="fade-up" data-aos-duration="700">
                 <div class="row justify-content-around p-4 m-0 rounded shadow" data-aos="fade-in" style="background-color: #F2F2F2;">
-                    <div class="col-md-12 text-center mb-3 rounded-5 pt-1 shadow text-light" style="background-color: #7BB5D3">
+                    <div class="col-md-12 text-center mb-3 rounded-5 pt-1 shadow text-light" style="background-color: #7BB5D3;">
                         <h2>I nostri piatti</h2>
                     </div>
                     <!-- Antipasti -->

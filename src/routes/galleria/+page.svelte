@@ -229,17 +229,10 @@
         <!-- Sezione video -->
         <div class="row mt-3 shadow rounded pt-3 pb-3" data-aos="fade-up" data-aos-delay="150">
             <div class="col">
-                <div class="row row-cols-1 g-4 justify-content-center">
-
-                    <!-- Copiare l'intero DIV e incollarlo, e poi modificare src="..." per aggiungere -->
+                <div class="row row-cols-1 g-4 justify-content-center" style="min-height: 50vh">
                     <div class="col text-center">
-                        <video class="p-0 rounded w-auto mx-auto h-100 shadow" controls
-                               preload="metadata" style="max-height: 85vh; max-width: 85vw">
-                            <source src="media/videos/editing/montage-1.webm" type="video/webm">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe class="rounded h-100 w-100" src="https://www.youtube.com/embed/f-4ZRlhKIUI?si=kw1MPl91yV238VnW" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -295,7 +288,7 @@
         color: #7BB5D3;
     }
 
-    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    .nav-pills .nav-link.active {
         color: #fff;
         background-color: #7BB5D3;
     }
