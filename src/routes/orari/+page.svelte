@@ -2,11 +2,7 @@
     import {onMount} from "svelte";
 
     onMount(() => {
-        // Init tooltips
-        let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl);
-        });
+        window.$('[data-bs-toggle="tooltip"]').tooltip();
     });
 
     let hour = new Date().getHours();

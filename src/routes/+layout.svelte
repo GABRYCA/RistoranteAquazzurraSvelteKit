@@ -9,11 +9,7 @@
             });
         });
 
-        // Init Bootstrap Tooltip
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl);
-        });
+        window.$('[data-bs-toggle="tooltip"]').tooltip();
 
         // Init AOS
         AOS.init({
