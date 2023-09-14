@@ -18,6 +18,11 @@
     });
 </script>
 
+<svelte:head>
+    <title>Ristorante Aquazzurra</title>
+    <meta name="description" content="Ristorante Aquazzurra" />
+</svelte:head>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light pb-2 pt-2 pb-lg-1 pt-lg-1 shadow">
     <div class="container">
