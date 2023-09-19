@@ -40,16 +40,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link rounded-5 px-lg-4" href="/">Home</a>
+                    <a class="nav-link rounded-5 px-lg-4" href="/">{$t('locale.NavbarTitle')}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link rounded-5 px-lg-4" href="/galleria">Galleria</a>
+                    <a class="nav-link rounded-5 px-lg-4" href="/galleria">{$t('locale.NavbarHome')}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link rounded-5 px-lg-4" href="/contatti">Posizione e Contatti</a>
+                    <a class="nav-link rounded-5 px-lg-4" href="/contatti">{$t('locale.NavbarContacts')}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link rounded-5 px-lg-4" href="/orari">Orari di Apertura</a>
+                    <a class="nav-link rounded-5 px-lg-4" href="/orari">{$t('locale.NavbarHours')}</a>
                 </li>
             </ul>
         </div>
@@ -61,9 +61,9 @@
 <!-- Footer -->
 <footer class="footer pb-3 pt-4 mt-5 shadow">
     <div class="container text-center">
-        <p class="thin-text">&copy; 2023 Ristorante Aquazzurra. Tutti i diritti riservati. - Viale Vittorio Veneto 37 - 28822 Cannobio (VB) - Italia - +39 0323 1991099 - <a class="link-body-emphasis" href="https://anonymousgca.eu" target="_blank" style="text-decoration: none !important;" data-bs-toggle="tooltip" data-bs-placement="top" title="Developer">credits</a></p>
+        <p class="thin-text">{@html $t('locale.FooterMessage')}</p>
     </div>
-    <select bind:value="{$locale}" on:change={handleChange}>
+    <select class="form-select" bind:value="{$locale}" on:change={handleChange}>
         {#each $locales as value}
             <option value="{value}">{$t(`lang.${value}`)}</option>
         {/each}

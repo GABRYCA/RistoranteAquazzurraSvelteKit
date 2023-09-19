@@ -10,22 +10,26 @@ export const config = {
         level: dev ? 'warn' : 'error',
     },
     translations: {
-        en: { lang },
         it: { lang },
+        en: { lang },
+        de: { lang }
     },
     loaders: [
         {
-            locale: 'en',
-            key: 'home',
-            routes: ['/'],
-            loader: async () => (await import('./en/home.json')).default,
+            locale: 'it',
+            key: 'locale',
+            loader: async () => (await import('./it/it.json')).default,
         },
         {
-            locale: 'it',
-            key: 'home',
-            routes: ['/'],
-            loader: async () => (await import('./it/home.json')).default,
+            locale: 'en',
+            key: 'locale',
+            loader: async () => (await import('./en/en.json')).default,
         },
+        {
+            locale: 'de',
+            key: 'locale',
+            loader: async () => (await import('./de/de.json')).default,
+        }
     ],
 };
 

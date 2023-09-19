@@ -17,13 +17,6 @@
 <div class="row mx-1 mx-lg-4">
     <div class="col">
 
-        <div class="row">
-            <div class="col">
-                <h1>{$t('home.title')}</h1>
-                <p>{@html $t('home.text', { link })}</p>
-            </div>
-        </div>
-
         <!-- HERO -->
         <div class="row mt-4 align-items-center">
             <div class="col">
@@ -56,15 +49,15 @@
                         </div>
                     </div>
                     <div class="carousel-caption w-100 d-sm-block d-md-block d-flex align-items-center">
-                        <h1 class="carousel-title pb-0 display-3 text-uppercase text-shadow text-center" style="font-family: Baskervville;" data-aos="zoom-in" data-aos-duration="750">Ristorante Aquazzurra</h1>
+                        <h1 class="carousel-title pb-0 display-3 text-uppercase text-shadow text-center" style="font-family: Baskervville;" data-aos="zoom-in" data-aos-duration="750">{$t('locale.SlideshowTitle')}</h1>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Precedente</span>
+                        <span class="visually-hidden">{$t('locale.SlideshowPrevious')}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Successivo</span>
+                        <span class="visually-hidden">{$t('locale.SlideshowNext')}</span>
                     </button>
                 </div>
             </div>
@@ -75,15 +68,15 @@
             <div class="col">
                 <div class="row p-4 m-0 rounded shadow" style="background-color: #F2F2F2;" data-aos="fade-up" data-aos-duration="700">
                     <div class="col-md-12 text-center mb-3 rounded-5 pt-1 shadow text-light" style="background-color: #7BB5D3">
-                        <h2 class="pt-1">Chi siamo</h2>
+                        <h2 class="pt-1">{$t('locale.WhoWeAreTitle')}</h2>
                     </div>
                     <div class="col-12 col-lg-5 p-0 p-md-auto mb-3 mb-lg-0">
                         <div class="row p-4 m-0 me-lg-3 h-100 rounded shadow" style="background-color: #F2F2F2;">
                             <div class="col-md-12 d-flex justify-content-center align-items-center text-center h-auto mb-3 rounded-5 pt-1 shadow">
-                                <h2>Il Ristorante Aquazzurra</h2>
+                                <h2>{$t('locale.WhoAreWeSubtitle')}</h2>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center align-items-center px-0 px-md-auto">
-                                <p class="text-center fs-5 thin-text">Il Ristorante Aquazzurra è un ristorante situato nel resort Aquazzurra a Cannobio, sul Lago Maggiore. Il ristorante è aperto a tutti, non solo agli ospiti del resort, e offre un'ampia scelta di piatti della cucina italiana, preparati con ingredienti freschi e di qualità. Il ristorante è aperto tutti i giorni, a pranzo e a cena.</p>
+                                <p class="text-center fs-5 thin-text">{$t('locale.WhoAreWeText')}</p>
                             </div>
                         </div>
                     </div>
@@ -101,7 +94,7 @@
             <div class="col" data-aos="fade-up" data-aos-duration="700">
                 <div class="row justify-content-around p-4 m-0 rounded shadow" data-aos="fade-in" style="background-color: #F2F2F2;">
                     <div class="col-md-12 text-center mb-3 rounded-5 pt-1 shadow text-light" style="background-color: #7BB5D3;">
-                        <h2>I nostri piatti</h2>
+                        <h2>{$t('locale.DishesTitle')}</h2>
                     </div>
                     <!-- Antipasti -->
                     <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/antipasto-optimized.webp'); background-size: cover;">
@@ -159,7 +152,7 @@
                     <div class="col">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <h2>Contattaci</h2>
+                                <h2>{$t('locale.ContactUsTitle')}</h2>
                             </div>
                         </div>
                         <div class="row mt-auto mt-lg-1 justify-content-center">
@@ -173,9 +166,9 @@
                             <div class="col-md-5 d-flex flex-column align-items-center mt-4 mt-lg-auto text-center">
                                 <div class="d-flex flex-row align-items-center">
                                     <i class="fas fa-phone fa-2x mb-2" style="color: #7BB5D3;"></i>
-                                    <p class="fs-5 mt-2 text-center ms-2">Prenota ora</p>
+                                    <p class="fs-5 mt-2 text-center ms-2">{$t('locale.ContactUsBookNow')}</p>
                                 </div>
-                                <span><a class="link-body-emphasis thin-text" href="tel:+3903231991099" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Componi numero">+39 0323 1991099</a></span>
+                                <span><a class="link-body-emphasis thin-text" href="tel:+3903231991099" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{$t('locale.ContactUsDialNumber')}">+39 0323 1991099</a></span>
                             </div>
                         </div>
                     </div>
