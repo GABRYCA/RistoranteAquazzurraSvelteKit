@@ -1,5 +1,6 @@
 <script>
     import {onMount} from "svelte";
+    import { t } from '$lib/translations';
 
     onMount(() => {
         window.$('[data-bs-toggle="tooltip"]').tooltip();
@@ -18,7 +19,7 @@
         <!-- Titolo pagina -->
         <div class="row m-0 mt-4 mb-4 pt-3 pb-2 food-bg rounded shadow" data-aos="fade-up">
             <div class="col">
-                <h1 class="text-center" style="color: #7BB5D3;">Posizione e contatti</h1>
+                <h1 class="text-center" style="color: #7BB5D3;">{$t('locale.ContactsUsPageTitle')}</h1>
             </div>
         </div>
 
@@ -45,13 +46,13 @@
                     <div class="col">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <h2>Contattaci</h2>
+                                <h2>{$t('locale.ContactUsTitle')}</h2>
                             </div>
                         </div>
                         <!-- Aggiunta una riga con una breve introduzione -->
                         <div class="row mt-auto mt-lg-1 justify-content-center">
                             <div class="col-md-10 text-center">
-                                <p class="thin-text">Se vuoi prenotare un tavolo o chiederci informazioni, puoi contattarci in uno dei seguenti modi:</p>
+                                <p class="thin-text">{$t('locale.ContactUsSubtitle')}</p>
                             </div>
                         </div>
                         <!-- Modificata la disposizione delle icone e dei testi -->
@@ -63,8 +64,8 @@
                             </div>
                             <div class="col-md-5 d-flex flex-column align-items-center mt-4 mt-lg-auto text-center">
                                 <i class="fas fa-phone fa-2x mb-2" style="color: #7BB5D3;"></i>
-                                <p class="fs-5 mt-2 text-center ms-2">Chiamaci</p>
-                                <span><a class="link-body-emphasis thin-text" href="tel:+3903231991099" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Componi numero">+39 0323 1991099</a></span>
+                                <p class="fs-5 mt-2 text-center ms-2">{$t('locale.ContactUsCallUs')}</p>
+                                <span><a class="link-body-emphasis thin-text" href="tel:+3903231991099" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{$t('locale.ContactUsDialNumber')}">+39 0323 1991099</a></span>
                             </div>
                         </div>
                     </div>

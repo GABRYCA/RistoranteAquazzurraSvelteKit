@@ -2,8 +2,6 @@
     import {onMount} from "svelte";
     import { t } from '$lib/translations';
 
-    const link = 'https://kit.svelte.dev';
-
     onMount(() => {
         window.$('[data-bs-toggle="tooltip"]').tooltip();
     });

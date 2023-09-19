@@ -49,7 +49,7 @@
                     <a class="nav-link rounded-5 px-lg-4" href="/contatti">{$t('locale.NavbarContacts')}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link rounded-5 px-lg-4" href="/orari">{$t('locale.NavbarHours')}</a>
+                    <a class="nav-link rounded-5 px-lg-4" href="/orari">{$t('locale.NavbarTimetables')}</a>
                 </li>
             </ul>
         </div>
