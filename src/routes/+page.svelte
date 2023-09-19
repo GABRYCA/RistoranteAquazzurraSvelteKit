@@ -1,5 +1,8 @@
 <script>
     import {onMount} from "svelte";
+    import { t } from '$lib/translations';
+
+    const link = 'https://kit.svelte.dev';
 
     onMount(() => {
         window.$('[data-bs-toggle="tooltip"]').tooltip();
@@ -13,6 +16,13 @@
 <!-- Content -->
 <div class="row mx-1 mx-lg-4">
     <div class="col">
+
+        <div class="row">
+            <div class="col">
+                <h1>{$t('home.title')}</h1>
+                <p>{@html $t('home.text', { link })}</p>
+            </div>
+        </div>
 
         <!-- HERO -->
         <div class="row mt-4 align-items-center">

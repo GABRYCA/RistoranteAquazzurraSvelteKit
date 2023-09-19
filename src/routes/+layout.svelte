@@ -1,5 +1,12 @@
 <script>
     import {onMount} from "svelte";
+    import { t, locale, locales } from '$lib/translations';
+
+    const handleChange = ({ currentTarget }) => {
+        const { value } = currentTarget;
+
+        document.cookie = `lang=${value} ;`;
+    };
 
     onMount(() => {
         // Close navbar when open another page, with animation
@@ -56,4 +63,9 @@
     <div class="container text-center">
         <p class="thin-text">&copy; 2023 Ristorante Aquazzurra. Tutti i diritti riservati. - Viale Vittorio Veneto 37 - 28822 Cannobio (VB) - Italia - +39 0323 1991099 - <a class="link-body-emphasis" href="https://anonymousgca.eu" target="_blank" style="text-decoration: none !important;" data-bs-toggle="tooltip" data-bs-placement="top" title="Developer">credits</a></p>
     </div>
+    <select bind:value="{$locale}" on:change={handleChange}>
+        {#each $locales as value}
+            <option value="{value}">{$t(`lang.${value}`)}</option>
+        {/each}
+    </select>
 </footer>
