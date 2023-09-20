@@ -5,6 +5,337 @@
     onMount(() => {
         window.$('[data-bs-toggle="tooltip"]').tooltip();
     });
+
+    // Define the products vector
+    let categories = [
+        {
+            name: $t('locale.DishesModalWinesRedsTitle'),
+            products: [
+                {
+                    name: "Barolo Germano",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Amarone Leon",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Amarone Astoria",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Bolgheri Podere Roseto",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Chianti Riserva Le Fonti",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Bolgheri Principe",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Nebbiolo Tuke' Pescaja",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Valpolicella Ripasso Domini Veneti",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Barbera Solitera Pescaja",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Chiuchino Valle Asinari",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Nebbiolo Ca' Boschi Viola",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Ruden Astoria",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Morellino Rocca Grimalda",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Dolcetto Blu Ca' Boschi",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Rocche di Mango Ca' Boschi",
+                    icon: "fas fa-wine-bottle"
+                }
+            ]
+        },
+        {
+            name: $t('locale.DishesModalWinesWhitesTitle'),
+            products: [
+                {
+                    name: "Aria Ca' Boschi Chardonnay",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Arneis Terre Alfieri",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Phylika Poggior Rosso",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Arneis Ca' Boschi",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Nuvola Ca' Boschi",
+                    icon: "fas fa-wine-bottle"
+                },
+            ]
+        },
+        {
+            name: $t('locale.DishesModalWinesRoseTitle'),
+            products: [
+                {
+                    name: "Le Flery Pescaja",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Mina Astoria",
+                    icon: "fas fa-wine-bottle"
+                },
+            ]
+        },
+        {
+            name: $t('locale.DishesModalWinesBubblesTitle'),
+            products: [
+                {
+                    name: "Franciacorta",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Astoria Rosè",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Millage D.O.C.G.",
+                    icon: "fas fa-wine-bottle"
+                },
+                {
+                    name: "Millage D.O.C.",
+                    icon: "fas fa-wine-bottle"
+                },
+            ]
+        }
+    ];
+
+    let salads = [
+        {
+            name: $t('locale.DishesModalSaladCapreseTitle'),
+            icon: "fas fa-leaf"
+        },
+        {
+            name: $t('locale.DishesModalSaladMistaTitle'),
+            icon: "fas fa-leaf"
+        },
+        {
+            name: $t('locale.DishesModalSaladPomodoriCipolleTitle'),
+            icon: "fas fa-leaf"
+        },
+        {
+            name: $t('locale.DishesModalSaladVerdeTitle'),
+            icon: "fas fa-leaf"
+        },
+    ];
+
+    let appetizers = [
+        {
+            name: $t('locale.DishesModalAppetizersTrisDiMareTitle'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalAppetizersTagliereOssolanoTitle'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalAppetizersTagliereFormaggiOssolaniTitle'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalAppetizersTartareMareTitle'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalAppetizersTartareManzoTitle'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalAppetizersPolpoPatateTitle'),
+            icon: "fas fa-utensils"
+        },
+    ];
+
+    let firstCourses = [
+        {
+            name: $t('locale.DishesModalFirstCoursesTaglioniGamberoniPistacchio'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalFirstCoursesGnocchiFondutaCapraGranellaFrutta'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalFirstCoursesTortelloniTartufoPecorino'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalFirstCoursesLasagnaPino'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalFirstCoursesSpaghetti'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalFirstCoursesBolognese'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalFirstCoursesPomodoro'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalFirstCoursesAglioOlioPeperoncino'),
+            icon: "fas fa-utensils"
+        },
+    ];
+
+    let hamburgers = [
+        {
+            name: $t('locale.DishesModalHamburgersVegano'),
+            icon: "fas fa-hamburger"
+        },
+        {
+            name: $t('locale.DishesModalHamburgersClassico'),
+            icon: "fas fa-hamburger"
+        },
+    ];
+
+    let secondCourses = [
+        {
+            name: $t('locale.DishesModalSecondCoursesTomahawak'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalSecondCoursesFilettoDuePepi'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalSecondCoursesOssobucoVitelloRisotto'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalSecondCoursesRibsMaiale'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalSecondCoursesTagliataManzo'),
+            icon: "fas fa-utensils"
+        },
+        {
+            name: $t('locale.DishesModalSecondCoursesTentacoliPolpoBurratina'),
+            icon: "fas fa-utensils"
+        },
+    ];
+
+    let pizzas = [
+        {
+            name: $t('locale.DishesModalPizzaMarinaraTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaMarinaraDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaMargheritaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaMargheritaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaProsciuttoTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaProsciuttoDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaTonnoCipolleTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaTonnoCipolleDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaNapoliTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaNapoliDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaDiavolaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaDiavolaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaPreziosaBiancaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaPreziosaBiancaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaBufalaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaBufalaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaQuattroStagioniTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaQuattroStagioniDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaCapricciosaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaCapricciosaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaFrescaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaFrescaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaFantasiaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaFantasiaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaQuattroFormaggiTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaQuattroFormaggiDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaVegetarianaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaVegetarianaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaPericolosaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaPericolosaDescription')
+        },
+        {
+            name: $t('locale.DishesModalPizzaCrudoRucolaGranaTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaCrudoRucolaGranaDescription')
+        },
+    ];
+
 </script>
 
 <svelte:head>
@@ -87,44 +418,271 @@
             </div>
         </div>
 
-        <!-- Sezione cibi -->
+        <!-- Sezione menu -->
         <div class="row mt-4">
             <div class="col" data-aos="fade-up" data-aos-duration="700">
                 <div class="row justify-content-around p-4 m-0 rounded shadow" data-aos="fade-in" style="background-color: #F2F2F2;">
-                    <div class="col-md-12 text-center mb-3 rounded-5 pt-1 shadow text-light" style="background-color: #7BB5D3;">
+                    <div class="col-md-12 text-center mb-3 rounded-5 pt-1 shadow text-light" style="background-color: #7BB5D3">
                         <h2>{$t('locale.DishesTitle')}</h2>
                     </div>
-                    <!-- Antipasti -->
-                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/antipasto-optimized.webp'); background-size: cover;">
-                        <i class="fas fa-seedling fa-3x bg-light p-4 pb-3 pt-3 rounded-top" style="color: #7BB5D3;"></i>
-                        <h4 class="bg-light rounded-top mb-0 pb-2 pt-2">Antipasti</h4>
-                        <p class="bg-light rounded-bottom pb-2 px-2 thin-text">Scopri i nostri antipasti freschi e gustosi, preparati con ingredienti di stagione e di qualità. Abbiamo una vasta scelta di insalate, verdure, formaggi, salumi e crostini.</p>
+                    <div class="col-md-5 col-xxl-2 mx-0 mx-md-1 text-center mb-4 pt-3 rounded shadow food-bg">
+                        <i class="fas fa-wine-bottle fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
+                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">{$t('locale.DishesWineTitle')}</h4>
+                        <button type="button" class="btn btn-primary mt-3 mb-3 w-100" data-bs-toggle="modal" data-bs-target="#wineModal">
+                            {$t('locale.DishesButton')}
+                        </button>
                     </div>
-                    <!-- Primi -->
-                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/primo-optimized.webp'); background-size: cover;">
-                        <i class="fas fa-concierge-bell fa-3x p-4 pb-3 pt-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
-                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">Primi</h4>
-                        <p class="bg-white rounded-bottom pb-2 px-2 thin-text">Non perderti i nostri primi piatti, dal sapore casalingo e ricco di tradizione. Ti proponiamo pasta fresca fatta in casa, risotti cremosi, gnocchi, lasagne e molto altro.</p>
+                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg">
+                        <i class="fas fa-seedling fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
+                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">{$t('locale.DishesSaladsTitle')}</h4>
+                        <button type="button" class="btn btn-primary mt-3 mb-3 w-100" data-bs-toggle="modal" data-bs-target="#saladModal">
+                            {$t('locale.DishesButton')}
+                        </button>
                     </div>
-                    <!-- Secondi -->
-                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/secondo-optimized.webp'); background-size: cover;">
+                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg">
+                        <i class="fas fa-cheese fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
+                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">{$t('locale.DishesAppetizersTitle')}</h4>
+                        <button type="button" class="btn btn-primary mt-3 mb-3 w-100" data-bs-toggle="modal" data-bs-target="#appetizerModal">
+                            {$t('locale.DishesButton')}
+                        </button>
+                    </div>
+                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg">
+                        <i class="fas fa-utensils fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
+                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">{$t('locale.DishesFirstCoursesTitle')}</h4>
+                        <button type="button" class="btn btn-primary mt-3 mb-3 w-100" data-bs-toggle="modal" data-bs-target="#firstCourseModal">
+                            {$t('locale.DishesButton')}
+                        </button>
+                    </div>
+                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg">
+                        <i class="fas fa-hamburger fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
+                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">{$t('locale.DishesHamburgersTitle')}</h4>
+                        <button type="button" class="btn btn-primary mt-3 mb-3 w-100" data-bs-toggle="modal" data-bs-target="#hamburgerModal">
+                            {$t('locale.DishesButton')}
+                        </button>
+                    </div>
+                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg">
                         <i class="fas fa-drumstick-bite fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
-                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2 ">Secondi</h4>
-                        <p class="bg-white rounded-bottom pb-2 px-2 thin-text">Sfiziosi e succulenti, i nostri secondi piatti sapranno soddisfare il tuo appetito. Puoi scegliere tra carne alla griglia, pesce del lago, polpette, arrosti e contorni vari.</p>
+                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">{$t('locale.DishesSecondCoursesTitle')}</h4>
+                        <button type="button" class="btn btn-primary mt-3 mb-3 w-100" data-bs-toggle="modal" data-bs-target="#secondCourseModal">
+                            {$t('locale.DishesButton')}
+                        </button>
                     </div>
-                    <!-- Dolci -->
-                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/dolce-optimized.webp'); background-size: cover;">
-                        <i class="fas fa-birthday-cake fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
-                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">Dolci</h4>
-                        <p class="bg-white rounded-bottom pb-2 px-2 thin-text">Dolcissima tentazione, i nostri dolci sono il modo perfetto per concludere il tuo pasto. Abbiamo torte, gelati, mousse, tiramisù, panna cotta e tante altre delizie.</p>
-                    </div>
-                    <!-- Bere -->
-                    <div class="col-md-12 text-center mb-4 pt-3 rounded shadow food-bg" style="background-image: url('/media/photos/webp/bere-optimized.webp'); background-size: cover;">
-                        <i class="fas fa-wine-glass-alt fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
-                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">Bere</h4>
-                        <p class="bg-white rounded-bottom pb-2 px-2 thin-text">Per accompagnare i tuoi piatti, ti offriamo una selezione di vini locali e nazionali, birre artigianali, succhi di frutta, acqua minerale e caffè.</p>
+                    <div class="col-md-5 col-xxl-2 text-center mb-4 pt-3 rounded shadow food-bg">
+                        <i class="fas fa-pizza-slice fa-3x p-4 pt-3 pb-3 bg-white rounded-top" style="color: #7BB5D3;"></i>
+                        <h4 class="bg-white rounded-top mb-0 pb-2 pt-2">{$t('locale.DishesPizzaTitle')}</h4>
+                        <button type="button" class="btn btn-primary mt-3 mb-3 w-100" data-bs-toggle="modal" data-bs-target="#pizzaModal">
+                            {$t('locale.DishesButton')}
+                        </button>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Sezione modal -->
+        <div class="row">
+            <div class="col">
+                <!-- Modali -->
+                <!-- Modal wine -->
+                <div class="modal fade" id="wineModal" tabindex="-1" aria-labelledby="wineModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-gradient-primary text-white">
+                                <h5 class="modal-title" id="wineModalLabel">{$t('locale.DishesWineTitle')}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-gradient-light">
+
+                                <ul class="nav nav-pills mb-4 justify-content-center" id="categoryTab" role="tablist">
+                                    {#each categories as category, index}
+                                        <li class="nav-item" role="presentation">
+                                            <button class={`nav-link ${index === 0 ? 'active' : ''}`} id="{category.name}-tab" data-bs-toggle="tab" data-bs-target="#{category.name}" type="button" role="tab" aria-controls="{category.name}" aria-selected="{index === 0 ? 'true' : 'false'}">{category.name}</button>
+                                        </li>
+                                    {/each}
+                                </ul>
+
+                                <div class="tab-content" id="categoryTabContent">
+                                    {#each categories as category, index}
+                                        <div class={`tab-pane fade ${index === 0 ? 'show active' : ''}`} id="{category.name}" role="tabpanel" aria-labelledby="{category.name}-tab">
+                                            <div class="row row-cols-2 row-cols-md-3 g-4">
+                                                {#each category.products as product}
+                                                    <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
+                                                        <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
+                                                            <i class="{product.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
+                                                            <h6 class="card-title mt-2">{product.name}</h6>
+                                                        </div>
+                                                    </div>
+                                                {/each}
+                                            </div>
+                                        </div>
+                                    {/each}
+                                </div>
+
+                            </div>
+                            <div class="modal-footer bg-gradient-primary text-white">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="saladModal" tabindex="-1" aria-labelledby="saladModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-gradient-primary text-white">
+                                <h5 class="modal-title" id="saladModalLabel">{$t('locale.DishesSaladTitle')}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-gradient-light">
+                                <div class="row row-cols-2 row-cols-md-3 g-4">
+                                    {#each salads as salad, index}
+                                        <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
+                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
+                                                <i class="{salad.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-2">{salad.name}</h6>
+                                            </div>
+                                        </div>
+                                    {/each}
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-gradient-primary text-white">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="appetizerModal" tabindex="-1" aria-labelledby="appetizerModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-gradient-primary text-white">
+                                <h5 class="modal-title" id="appetizerModalLabel">{$t('locale.DishesAppetizerTitle')}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-gradient-light">
+                                <div class="row row-cols-2 row-cols-md-3 g-4">
+                                    {#each appetizers as appetizer, index}
+                                        <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
+                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
+                                                <i class="{appetizer.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-2">{appetizer.name}</h6>
+                                            </div>
+                                        </div>
+                                    {/each}
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-gradient-primary text-white">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="firstCourseModal" tabindex="-1" aria-labelledby="firstCourseModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-gradient-primary text-white">
+                                <h5 class="modal-title" id="firstCourseModalLabel">{$t('locale.DishesFirstCourseTitle')}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-gradient-light">
+                                <div class="row row-cols-2 row-cols-md-3 g-4">
+                                    {#each firstCourses as firstCourse, index}
+                                        <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
+                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
+                                                <i class="{firstCourse.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-2">{firstCourse.name}</h6>
+                                            </div>
+                                        </div>
+                                    {/each}
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-gradient-primary text-white">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="hamburgerModal" tabindex="-1" aria-labelledby="hamburgerModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-gradient-primary text-white">
+                                <h5 class="modal-title" id="hamburgerModalLabel">{$t('locale.DishesHamburgerTitle')}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-gradient-light">
+                                <div class="row row-cols-2 row-cols-md-3 g-4">
+                                    {#each hamburgers as hamburger, index}
+                                        <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
+                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
+                                                <i class="{hamburger.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-2">{hamburger.name}</h6>
+                                            </div>
+                                        </div>
+                                    {/each}
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-gradient-primary text-white">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="secondCourseModal" tabindex="-1" aria-labelledby="secondCourseModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-gradient-primary text-white">
+                                <h5 class="modal-title" id="secondCourseModalLabel">{$t('locale.DishesSecondCourseTitle')}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-gradient-light">
+                                <div class="row row-cols-2 row-cols-md-3 g-4">
+                                    {#each secondCourses as secondCourse, index}
+                                        <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
+                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
+                                                <i class="{secondCourse.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-2">{secondCourse.name}</h6>
+                                            </div>
+                                        </div>
+                                    {/each}
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-gradient-primary text-white">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="pizzaModal" tabindex="-1" aria-labelledby="pizzaModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-gradient-primary text-white">
+                                <h5 class="modal-title" id="pizzaModalLabel">{$t('locale.DishesPizzaTitle')}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-gradient-light">
+                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                    <!-- Loop through the list of pizzas -->
+                                    {#each pizzas as pizza, index}
+                                        <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
+                                            <div class="card h-100 border-0 shadow-sm bg-white rounded text-center p-3">
+                                                <i class="{pizza.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-2">{pizza.name}</h6>
+                                                <p class="card-text">{pizza.description}</p>
+                                            </div>
+                                        </div>
+                                    {/each}
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-gradient-primary text-white">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -175,3 +733,34 @@
         </div>
     </div>
 </div>
+
+<style>
+    .btn-primary {
+        background-color: #7BB5D3;
+        border-color: #7BB5D3;
+    }
+
+    .btn-primary:hover {
+        background-color: #6aa7c5;
+        border-color: #6aa7c5;
+    }
+
+    .btn-primary:focus {
+        background-color: #6aa7c5;
+        border-color: #6aa7c5;
+    }
+
+    .btn-primary:active {
+        background-color: #6aa7c5;
+        border-color: #6aa7c5;
+    }
+
+    .nav-pills .nav-link {
+        color: #7BB5D3;
+    }
+
+    .nav-pills .nav-link.active {
+        color: #fff;
+        background-color: #7BB5D3;
+    }
+</style>
