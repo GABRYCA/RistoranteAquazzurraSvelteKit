@@ -4,8 +4,8 @@
 
     const handleChange = ({ currentTarget }) => {
         const { value } = currentTarget;
-
         document.cookie = `lang=${value} ;`;
+        window.location.reload();
     };
 
     onMount(() => {

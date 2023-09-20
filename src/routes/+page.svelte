@@ -285,6 +285,11 @@
             description: $t('locale.DishesModalPizzaDiavolaDescription')
         },
         {
+            name: $t('locale.DishesModalPizzaProsciuttoFunghiTitle'),
+            icon: "fas fa-pizza-slice",
+            description: $t('locale.DishesModalPizzaProsciuttoFunghiDescription')
+        },
+        {
             name: $t('locale.DishesModalPizzaPreziosaBiancaTitle'),
             icon: "fas fa-pizza-slice",
             description: $t('locale.DishesModalPizzaPreziosaBiancaDescription')
@@ -507,8 +512,8 @@
                                                 {#each category.products as product}
                                                     <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
                                                         <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
-                                                            <i class="{product.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
-                                                            <h6 class="card-title mt-2">{product.name}</h6>
+                                                            <i class="{product.icon} fa-2x text-primary my-auto" style="color: #7BB5D3 !important;"></i>
+                                                            <h6 class="card-title mt-1 my-auto">{product.name}</h6>
                                                         </div>
                                                     </div>
                                                 {/each}
@@ -536,9 +541,9 @@
                                 <div class="row row-cols-2 row-cols-md-3 g-4">
                                     {#each salads as salad, index}
                                         <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
-                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
-                                                <i class="{salad.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
-                                                <h6 class="card-title mt-2">{salad.name}</h6>
+                                            <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
+                                                <i class="{salad.icon} fa-2x text-primary my-auto" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-1 my-auto">{salad.name}</h6>
                                             </div>
                                         </div>
                                     {/each}
@@ -562,9 +567,9 @@
                                 <div class="row row-cols-2 row-cols-md-3 g-4">
                                     {#each appetizers as appetizer, index}
                                         <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
-                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
-                                                <i class="{appetizer.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
-                                                <h6 class="card-title mt-2">{appetizer.name}</h6>
+                                            <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
+                                                <i class="{appetizer.icon} fa-2x text-primary my-auto" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-1 my-auto">{appetizer.name}</h6>
                                             </div>
                                         </div>
                                     {/each}
@@ -588,9 +593,9 @@
                                 <div class="row row-cols-2 row-cols-md-3 g-4">
                                     {#each firstCourses as firstCourse, index}
                                         <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
-                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
-                                                <i class="{firstCourse.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
-                                                <h6 class="card-title mt-2">{firstCourse.name}</h6>
+                                            <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
+                                                <i class="{firstCourse.icon} fa-2x text-primary my-auto" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-1 my-auto">{firstCourse.name}</h6>
                                             </div>
                                         </div>
                                     {/each}
@@ -614,9 +619,9 @@
                                 <div class="row row-cols-2 row-cols-md-3 g-4">
                                     {#each hamburgers as hamburger, index}
                                         <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
-                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
-                                                <i class="{hamburger.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
-                                                <h6 class="card-title mt-2">{hamburger.name}</h6>
+                                            <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
+                                                <i class="{hamburger.icon} fa-2x text-primary my-auto" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-1 my-auto">{hamburger.name}</h6>
                                             </div>
                                         </div>
                                     {/each}
@@ -640,9 +645,9 @@
                                 <div class="row row-cols-2 row-cols-md-3 g-4">
                                     {#each secondCourses as secondCourse, index}
                                         <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
-                                            <div class="card h-100 border-0 shadow-sm bg-white rounded-pill text-center p-3">
-                                                <i class="{secondCourse.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
-                                                <h6 class="card-title mt-2">{secondCourse.name}</h6>
+                                            <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
+                                                <i class="{secondCourse.icon} fa-2x text-primary my-auto" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-1 my-auto">{secondCourse.name}</h6>
                                             </div>
                                         </div>
                                     {/each}
@@ -664,13 +669,12 @@
                             </div>
                             <div class="modal-body bg-gradient-light">
                                 <div class="row row-cols-1 row-cols-md-2 g-4">
-                                    <!-- Loop through the list of pizzas -->
                                     {#each pizzas as pizza, index}
                                         <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
-                                            <div class="card h-100 border-0 shadow-sm bg-white rounded text-center p-3">
-                                                <i class="{pizza.icon} fa-2x text-primary" style="color: #7BB5D3 !important;"></i>
-                                                <h6 class="card-title mt-2">{pizza.name}</h6>
-                                                <p class="card-text">{pizza.description}</p>
+                                            <div class="card h-100 border-0 shadow bg-white rounded text-center p-3">
+                                                <i class="{pizza.icon} fa-2x text-primary my-auto" style="color: #7BB5D3 !important;"></i>
+                                                <h6 class="card-title mt-1 my-auto">{pizza.name}</h6>
+                                                <p class="card-text my-auto thin-text">{pizza.description}</p>
                                             </div>
                                         </div>
                                     {/each}
