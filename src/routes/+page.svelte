@@ -884,4 +884,8 @@
         color: #fff;
         background-color: #7BB5D3;
     }
+
+    :global(body){
+        padding-right: 0 !important;
+    }
 </style>
