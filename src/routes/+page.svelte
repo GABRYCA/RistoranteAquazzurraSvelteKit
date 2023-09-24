@@ -817,7 +817,7 @@
                                 </div>
                                 <span><a class="link-body-emphasis thin-text" href="tel:+3903231991099"
                                          style="text-decoration: none;" data-bs-toggle="tooltip"
-                                         data-bs-placement="bottom" title="{$t('locale.ContactUsDialNumber')}">+39 0323 1991099</a></span>
+                                         data-bs-placement="bottom" title="{$t('locale.ContactUsDialNumber')}">+39 0323 199 1099</a></span>
                             </div>
                         </div>
                     </div>

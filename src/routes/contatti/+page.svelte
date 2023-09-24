@@ -65,7 +65,7 @@
                             <div class="col-md-5 d-flex flex-column align-items-center mt-4 mt-lg-auto text-center">
                                 <i class="fas fa-phone fa-2x mb-2" style="color: #7BB5D3;"></i>
                                 <p class="fs-5 mt-2 text-center ms-2">{$t('locale.ContactUsCallUs')}</p>
-                                <span><a class="link-body-emphasis thin-text" href="tel:+3903231991099" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{$t('locale.ContactUsDialNumber')}">+39 0323 1991099</a></span>
+                                <span><a class="link-body-emphasis thin-text" href="tel:+3903231991099" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{$t('locale.ContactUsDialNumber')}">+39 0323 199 1099</a></span>
                             </div>
                         </div>
                     </div>

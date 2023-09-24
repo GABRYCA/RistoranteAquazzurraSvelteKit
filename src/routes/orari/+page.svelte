@@ -58,7 +58,7 @@
                         <h2 class="text-center mb-4" style="color: white; padding: 0.5rem; border-radius: 0.5rem;">Orari del ristorante</h2>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="circle bg-success" data-aos="zoom-in" data-aos-delay="300"><span class="hour">8</span></div>
-                            <div class="line bg-success" data-aos="slide-right" data-aos-delay="400"></div>
+                            <div class="line bg-success" data-aos="fade-right" data-aos-delay="400"></div>
                             <div class="circle bg-danger" data-aos="zoom-in" data-aos-delay="500"><span class="hour">22</span></div>
                         </div>
                         <div class="d-flex justify-content-center align-items-center mt-3">
