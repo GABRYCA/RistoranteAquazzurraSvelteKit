@@ -55,7 +55,7 @@
             <div class="col">
                 <div class="card shadow p-4 mt-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-body">
-                        <h2 class="text-center mb-4" style="color: white; padding: 0.5rem; border-radius: 0.5rem;">Orari del ristorante</h2>
+                        <h2 class="text-center mb-4" style="color: white; padding: 0.5rem; border-radius: 0.5rem;">{$t('locale.TimetablesTitle')}</h2>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="circle bg-success" data-aos="zoom-in" data-aos-delay="300"><span class="hour">8</span></div>
                             <div class="line bg-success" data-aos="fade-right" data-aos-delay="400"></div>
