@@ -23,23 +23,6 @@
 </div>
 
 <style>
-    body {
-        background-color: #f8f9fa;
-    }
-
-    .btn-primary {
-        background-color: #0d6efd;
-        border-color: #0d6efd;
-    }
-
-    .btn-primary:hover {
-        background-color: #0b5ed7;
-        border-color: #0b5ed7;
-    }
-
-    .btn-primary:focus {
-        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.5);
-    }
 
     .text-danger {
         color: #0d6efd;

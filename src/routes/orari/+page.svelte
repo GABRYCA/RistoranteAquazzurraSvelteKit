@@ -1,4 +1,6 @@
 <script>
+    import { run } from 'svelte/legacy';
+
     import {onMount} from "svelte";
     import { t } from '$lib/translations';
 
@@ -6,21 +8,13 @@
         window.$('[data-bs-toggle="tooltip"]').tooltip();
     });
 
-    let hour = new Date().getHours();
+    let hour = $state(new Date().getHours());
     let openingHour = 8;
     let closingHour = 22;
-    let isOpen = hour >= openingHour && hour < closingHour;
-    let statusMessage = isOpen ? $t('locale.TimetablesOpen') : $t('locale.TimetablesClosed');
-    let sunIconVisible = isOpen;
-    let moonIconVisible = !isOpen;
-
-    $: {
-        hour = new Date().getHours();
-        isOpen = hour >= openingHour && hour < closingHour;
-        statusMessage = isOpen ? 'Aperti' : 'Chiusi';
-        sunIconVisible = isOpen;
-        moonIconVisible = !isOpen;
-    }
+    let isOpen = $derived(hour >= openingHour && hour < closingHour);
+    let statusMessage = $derived(isOpen ? $t('locale.TimetablesOpen') : $t('locale.TimetablesClosed'));
+    let sunIconVisible = $derived(isOpen);
+    let moonIconVisible = $derived(!isOpen);
 </script>
 
 <svelte:head>

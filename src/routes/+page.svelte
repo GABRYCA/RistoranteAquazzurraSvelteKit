@@ -44,7 +44,6 @@
         }
     ];
 
-    // Define the products vector
     let categories = [
         {
             name: $t('locale.DishesModalWinesRedsTitle'),
@@ -484,7 +483,7 @@
                     </div>
                     {#each menuItems as item}
                         <div class="col-md-5 col-xxl-2 mx-0 mx-md-1 text-center mb-4 pt-3 rounded shadow food-bg">
-                            <i class={`fas fa-${item.icon} fa-3x p-4 pt-3 pb-3 bg-white rounded-top food-icon`}></i>
+                            <i class={`fas fa-${item.icon} fa-3x pt-3 pb-3 bg-white rounded-top food-icon`}></i>
                             <h4 class="bg-white rounded mb-0 pb-3 pt-3 shadow"
                                 style="font-family: 'Lobster', cursive;">{item.title}</h4>
                             <button type="button" class="btn btn-primary mt-3 mb-3 w-100 shadow" data-bs-toggle="modal"
@@ -558,7 +557,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="saladModalLabel">{$t('locale.DishesSaladTitle')}</h5>
+                        <h5 class="modal-title" id="saladModalLabel">{$t('locale.DishesSaladsTitle')}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -594,7 +593,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="appetizerModalLabel">{$t('locale.DishesAppetizerTitle')}</h5>
+                        <h5 class="modal-title" id="appetizerModalLabel">{$t('locale.DishesAppetizersTitle')}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -630,7 +629,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="firstCourseModalLabel">{$t('locale.DishesFirstCourseTitle')}</h5>
+                        <h5 class="modal-title" id="firstCourseModalLabel">{$t('locale.DishesFirstCoursesTitle')}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -666,7 +665,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="hamburgerModalLabel">{$t('locale.DishesHamburgerTitle')}</h5>
+                        <h5 class="modal-title" id="hamburgerModalLabel">{$t('locale.DishesHamburgersTitle')}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -702,7 +701,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="secondCourseModalLabel">{$t('locale.DishesSecondCourseTitle')}</h5>
+                        <h5 class="modal-title" id="secondCourseModalLabel">{$t('locale.DishesSecondCoursesTitle')}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">

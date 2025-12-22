@@ -1,6 +1,11 @@
 <script>
     import {onMount} from "svelte";
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    import scriptSrc from 'bootstrap/dist/js/bootstrap.bundle.min.js?url';
+    import '@fortawesome/fontawesome-free/css/all.min.css';
     import { t, locale, locales } from '$lib/translations';
+    /** @type {{children?: import('svelte').Snippet}} */
+    let { children } = $props();
 
     const handleChange = ({ currentTarget }) => {
         const { value } = currentTarget;
@@ -28,6 +33,7 @@
 <svelte:head>
     <title>Ristorante Aquazzurra</title>
     <meta name="description" content="Ristorante Aquazzurra" />
+    <script rel="preload" src={scriptSrc}></script>
 </svelte:head>
 
 <!-- Navbar -->
@@ -56,14 +62,14 @@
     </div>
 </nav>
 
-<slot></slot>
+{@render children?.()}
 
 <!-- Footer -->
 <footer class="footer pb-3 pt-4 mt-5 shadow">
     <div class="container text-center">
         <p class="thin-text">{@html $t('locale.FooterMessage')}</p>
     </div>
-    <select class="form-select" bind:value="{$locale}" on:change={handleChange}>
+    <select class="form-select" bind:value="{$locale}" onchange={handleChange}>
         {#each $locales as value}
             <option value="{value}">{$t(`lang.${value}`)}</option>
         {/each}
