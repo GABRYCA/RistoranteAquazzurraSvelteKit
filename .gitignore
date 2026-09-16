@@ -1,8 +1,10 @@
 .DS_Store
 node_modules
+bun-debug.log*
 /build
 /.svelte-kit
 /package
+/.netlify
 .env
 .env.*
 !.env.example
@@ -12,3 +14,4 @@ vite.config.ts.timestamp-*
 # Paraglide
 src/lib/paraglide
 project.inlang/cache/
+/CHANGELOGS.md
