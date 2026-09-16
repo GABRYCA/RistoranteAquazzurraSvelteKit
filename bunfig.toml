@@ -1,0 +1,10 @@
+# Bun 1.4 configuration — see https://bun.sh/docs/runtime/bunfig
+[install]
+# Text-based lockfile (default since Bun 1.2, committed to git).
+saveTextLockfile = true
+# Hoisted linking matches the previous npm layout most closely.
+linker = "hoisted"
+
+[run]
+# Run package.json scripts with Bun by default (`bun run dev`, `bun --bun run build`).
+bun = true

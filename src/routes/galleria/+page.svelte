@@ -1,6 +1,6 @@
 <script>
     import {onMount} from "svelte";
-    import { t } from '$lib/translations';
+    import * as m from '$lib/paraglide/messages.js';
 
     onMount(() => {
         window.$('[data-bs-toggle="tooltip"]').tooltip();
@@ -22,8 +22,8 @@
                 <!-- Sezione galleria -->
                 <div class="row mt-4 mb-4 shadow rounded p-1 pt-3 pb-3 shadow rounded" data-aos="fade-up">
                     <div class="col">
-                        <h1 class="text-center" style="color: #7BB5D3;">{$t('locale.GalleryTitle')}</h1>
-                        <p class="text-center thin-text">{$t('locale.GallerySubtitle')}</p>
+                        <h1 class="text-center" style="color: #7BB5D3;">{m.GalleryTitle()}</h1>
+                        <p class="text-center thin-text">{m.GallerySubtitle()}</p>
                     </div>
                 </div>
 
@@ -33,7 +33,8 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="exterior-tab" data-bs-toggle="pill"
                                         data-bs-target="#exterior" type="button" role="tab" aria-controls="exterior"
-                                        aria-selected="true" style="transition: opacity 0.3s ease-in-out;"><i
+                                        aria-selected="true" aria-label={m.gallery_exterior()}
+                                        style="transition: opacity 0.3s ease-in-out;"><i
                                         class="fas fa-building"></i>
                                 </button>
                             </li>
@@ -41,6 +42,7 @@
                                 <button class="nav-link" id="interior-tab" data-bs-toggle="pill"
                                         data-bs-target="#interior"
                                         type="button" role="tab" aria-controls="interior" aria-selected="false"
+                                        aria-label={m.gallery_interior()}
                                         style="transition: opacity 0.3s ease-in-out;"><i
                                         class="fas fa-utensils"></i>
                                 </button>
@@ -49,6 +51,7 @@
                                 <button class="nav-link" id="location-tab" data-bs-toggle="pill"
                                         data-bs-target="#location"
                                         type="button" role="tab" aria-controls="location" aria-selected="false"
+                                        aria-label={m.gallery_location()}
                                         style="transition: opacity 0.3s ease-in-out;"><i
                                         class="fas fa-map-signs"></i>
                                 </button>
@@ -67,8 +70,8 @@
                                     <!-- Copiare l'intero DIV e incollarlo, e poi modificare src="..." per aggiungere -->
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0008-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0008-optimized.webp"
+                                            <a href="/media/photos/webp/0008-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0008-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -77,8 +80,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0007-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0007-optimized.webp"
+                                            <a href="/media/photos/webp/0007-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0007-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -87,8 +90,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0006-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0006-optimized.webp"
+                                            <a href="/media/photos/webp/0006-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0006-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -97,8 +100,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0022-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0022-optimized.webp"
+                                            <a href="/media/photos/webp/0022-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0022-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -107,8 +110,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0023-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0023-optimized.webp"
+                                            <a href="/media/photos/webp/0023-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0023-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -123,8 +126,8 @@
                                     <!-- Copiare l'intero DIV e incollarlo, e poi modificare src="..." per aggiungere -->
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0010-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0010-optimized.webp"
+                                            <a href="/media/photos/webp/0010-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0010-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="Immagine">
                                             </a>
@@ -133,8 +136,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0032-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0032-optimized.webp"
+                                            <a href="/media/photos/webp/0032-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0032-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -149,8 +152,8 @@
                                     <!-- Copiare l'intero DIV e incollarlo, e poi modificare src="..." per aggiungere -->
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0013-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0013-optimized.webp"
+                                            <a href="/media/photos/webp/0013-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0013-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -159,8 +162,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0019-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0019-optimized.webp"
+                                            <a href="/media/photos/webp/0019-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0019-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -169,8 +172,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0015-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0015-optimized.webp"
+                                            <a href="/media/photos/webp/0015-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0015-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -179,8 +182,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0014-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0014-optimized.webp"
+                                            <a href="/media/photos/webp/0014-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0014-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -190,8 +193,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0026-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0026-optimized.webp"
+                                            <a href="/media/photos/webp/0026-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0026-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -200,8 +203,8 @@
 
                                     <div class="col">
                                         <div class="card h-100 shadow rounded">
-                                            <a href="media/photos/webp/0029-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{$t('locale.GalleryImageTooltip')}">
-                                                <img src="media/photos/webp/0029-optimized.webp"
+                                            <a href="/media/photos/webp/0029-optimized.webp" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="{m.GalleryImageTooltip()}">
+                                                <img src="/media/photos/webp/0029-optimized.webp"
                                                      class="card-img rounded img-fluid w-100 h-100 object-fit-cover"
                                                      alt="immagine">
                                             </a>
@@ -219,7 +222,7 @@
 
         <div class="row mt-5 mb-4 shadow rounded p-1 pt-3 pb-2 shadow rounded" data-aos="fade-up">
             <div class="col">
-                <h1 class="text-center" style="color: #7BB5D3;">{$t('locale.GalleryVideosTitle')}</h1>
+                <h1 class="text-center" style="color: #7BB5D3;">{m.GalleryVideosTitle()}</h1>
             </div>
         </div>
 
@@ -241,12 +244,12 @@
                     <div class="col">
                         <h2 class="text-center mb-4"
                             style="background: linear-gradient(to right, #7bb5d3, #a1d8f1); box-shadow: 0 4px 15px rgba(123, 181, 211, 0.6); color: white; padding: 0.5rem; border-radius: 0.5rem;">
-                            {$t('locale.GalleryDisclaimerTitle')}</h2>
+                            {m.GalleryDisclaimerTitle()}</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p class="text-center thin-text">{$t('locale.GalleryDisclaimerText')}</p>
+                        <p class="text-center thin-text">{m.GalleryDisclaimerText()}</p>
                     </div>
                 </div>
             </div>

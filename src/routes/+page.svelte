@@ -1,6 +1,6 @@
 <script>
     import {onMount} from "svelte";
-    import {t} from '$lib/translations';
+    import * as m from '$lib/paraglide/messages.js';
 
     onMount(() => {
         window.$('[data-bs-toggle="tooltip"]').tooltip();
@@ -9,45 +9,44 @@
     let menuItems = [
         {
             icon: 'wine-bottle',
-            title: $t('locale.DishesWineTitle'),
+            title: m.DishesWineTitle(),
             modal: '#wineModal'
         },
         {
             icon: 'seedling',
-            title: $t('locale.DishesSaladsTitle'),
+            title: m.DishesSaladsTitle(),
             modal: '#saladModal'
         },
         {
             icon: 'cheese',
-            title: $t('locale.DishesAppetizersTitle'),
+            title: m.DishesAppetizersTitle(),
             modal: '#appetizerModal'
         },
         {
             icon: 'utensils',
-            title: $t('locale.DishesFirstCoursesTitle'),
+            title: m.DishesFirstCoursesTitle(),
             modal: '#firstCourseModal'
         },
         {
             icon: 'hamburger',
-            title: $t('locale.DishesHamburgersTitle'),
+            title: m.DishesHamburgersTitle(),
             modal: '#hamburgerModal'
         },
         {
             icon: 'drumstick-bite',
-            title: $t('locale.DishesSecondCoursesTitle'),
+            title: m.DishesSecondCoursesTitle(),
             modal: '#secondCourseModal'
         },
         {
             icon: 'pizza-slice',
-            title: $t('locale.DishesPizzaTitle'),
+            title: m.DishesPizzaTitle(),
             modal: '#pizzaModal'
         }
     ];
 
-    // Define the products vector
     let categories = [
         {
-            name: $t('locale.DishesModalWinesRedsTitle'),
+            name: m.DishesModalWinesRedsTitle(),
             products: [
                 {
                     name: "Barolo Germano",
@@ -112,7 +111,7 @@
             ]
         },
         {
-            name: $t('locale.DishesModalWinesWhitesTitle'),
+            name: m.DishesModalWinesWhitesTitle(),
             products: [
                 {
                     name: "Aria Ca' Boschi Chardonnay",
@@ -137,7 +136,7 @@
             ]
         },
         {
-            name: $t('locale.DishesModalWinesRoseTitle'),
+            name: m.DishesModalWinesRoseTitle(),
             products: [
                 {
                     name: "Le Flery Pescaja",
@@ -150,7 +149,7 @@
             ]
         },
         {
-            name: $t('locale.DishesModalWinesBubblesTitle'),
+            name: m.DishesModalWinesBubblesTitle(),
             products: [
                 {
                     name: "Franciacorta",
@@ -174,208 +173,208 @@
 
     let salads = [
         {
-            name: $t('locale.DishesModalSaladCapreseTitle'),
+            name: m.DishesModalSaladCapreseTitle(),
             icon: "fas fa-leaf"
         },
         {
-            name: $t('locale.DishesModalSaladMistaTitle'),
+            name: m.DishesModalSaladMistaTitle(),
             icon: "fas fa-leaf"
         },
         {
-            name: $t('locale.DishesModalSaladPomodoriCipolleTitle'),
+            name: m.DishesModalSaladPomodoriCipolleTitle(),
             icon: "fas fa-leaf"
         },
         {
-            name: $t('locale.DishesModalSaladVerdeTitle'),
+            name: m.DishesModalSaladVerdeTitle(),
             icon: "fas fa-leaf"
         },
     ];
 
     let appetizers = [
         {
-            name: $t('locale.DishesModalAppetizersTrisDiMareTitle'),
+            name: m.DishesModalAppetizersTrisDiMareTitle(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalAppetizersTagliereOssolanoTitle'),
+            name: m.DishesModalAppetizersTagliereOssolanoTitle(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalAppetizersTagliereFormaggiOssolaniTitle'),
+            name: m.DishesModalAppetizersTagliereFormaggiOssolaniTitle(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalAppetizersTartareMareTitle'),
+            name: m.DishesModalAppetizersTartareMareTitle(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalAppetizersTartareManzoTitle'),
+            name: m.DishesModalAppetizersTartareManzoTitle(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalAppetizersPolpoPatateTitle'),
+            name: m.DishesModalAppetizersPolpoPatateTitle(),
             icon: "fas fa-utensils"
         },
     ];
 
     let firstCourses = [
         {
-            name: $t('locale.DishesModalFirstCoursesTaglioniGamberoniPistacchio'),
+            name: m.DishesModalFirstCoursesTaglioniGamberoniPistacchio(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalFirstCoursesGnocchiFondutaCapraGranellaFrutta'),
+            name: m.DishesModalFirstCoursesGnocchiFondutaCapraGranellaFrutta(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalFirstCoursesTortelloniTartufoPecorino'),
+            name: m.DishesModalFirstCoursesTortelloniTartufoPecorino(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalFirstCoursesLasagnaPino'),
+            name: m.DishesModalFirstCoursesLasagnaPino(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalFirstCoursesSpaghetti'),
+            name: m.DishesModalFirstCoursesSpaghetti(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalFirstCoursesBolognese'),
+            name: m.DishesModalFirstCoursesBolognese(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalFirstCoursesPomodoro'),
+            name: m.DishesModalFirstCoursesPomodoro(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalFirstCoursesAglioOlioPeperoncino'),
+            name: m.DishesModalFirstCoursesAglioOlioPeperoncino(),
             icon: "fas fa-utensils"
         },
     ];
 
     let hamburgers = [
         {
-            name: $t('locale.DishesModalHamburgersVegano'),
+            name: m.DishesModalHamburgersVegano(),
             icon: "fas fa-hamburger"
         },
         {
-            name: $t('locale.DishesModalHamburgersClassico'),
+            name: m.DishesModalHamburgersClassico(),
             icon: "fas fa-hamburger"
         },
     ];
 
     let secondCourses = [
         {
-            name: $t('locale.DishesModalSecondCoursesTomahawak'),
+            name: m.DishesModalSecondCoursesTomahawak(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalSecondCoursesFilettoDuePepi'),
+            name: m.DishesModalSecondCoursesFilettoDuePepi(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalSecondCoursesOssobucoVitelloRisotto'),
+            name: m.DishesModalSecondCoursesOssobucoVitelloRisotto(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalSecondCoursesRibsMaiale'),
+            name: m.DishesModalSecondCoursesRibsMaiale(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalSecondCoursesTagliataManzo'),
+            name: m.DishesModalSecondCoursesTagliataManzo(),
             icon: "fas fa-utensils"
         },
         {
-            name: $t('locale.DishesModalSecondCoursesTentacoliPolpoBurratina'),
+            name: m.DishesModalSecondCoursesTentacoliPolpoBurratina(),
             icon: "fas fa-utensils"
         },
     ];
 
     let pizzas = [
         {
-            name: $t('locale.DishesModalPizzaMarinaraTitle'),
+            name: m.DishesModalPizzaMarinaraTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaMarinaraDescription')
+            description: m.DishesModalPizzaMarinaraDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaMargheritaTitle'),
+            name: m.DishesModalPizzaMargheritaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaMargheritaDescription')
+            description: m.DishesModalPizzaMargheritaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaProsciuttoTitle'),
+            name: m.DishesModalPizzaProsciuttoTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaProsciuttoDescription')
+            description: m.DishesModalPizzaProsciuttoDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaTonnoCipolleTitle'),
+            name: m.DishesModalPizzaTonnoCipolleTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaTonnoCipolleDescription')
+            description: m.DishesModalPizzaTonnoCipolleDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaNapoliTitle'),
+            name: m.DishesModalPizzaNapoliTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaNapoliDescription')
+            description: m.DishesModalPizzaNapoliDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaDiavolaTitle'),
+            name: m.DishesModalPizzaDiavolaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaDiavolaDescription')
+            description: m.DishesModalPizzaDiavolaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaProsciuttoFunghiTitle'),
+            name: m.DishesModalPizzaProsciuttoFunghiTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaProsciuttoFunghiDescription')
+            description: m.DishesModalPizzaProsciuttoFunghiDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaPreziosaBiancaTitle'),
+            name: m.DishesModalPizzaPreziosaBiancaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaPreziosaBiancaDescription')
+            description: m.DishesModalPizzaPreziosaBiancaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaBufalaTitle'),
+            name: m.DishesModalPizzaBufalaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaBufalaDescription')
+            description: m.DishesModalPizzaBufalaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaQuattroStagioniTitle'),
+            name: m.DishesModalPizzaQuattroStagioniTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaQuattroStagioniDescription')
+            description: m.DishesModalPizzaQuattroStagioniDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaCapricciosaTitle'),
+            name: m.DishesModalPizzaCapricciosaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaCapricciosaDescription')
+            description: m.DishesModalPizzaCapricciosaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaFrescaTitle'),
+            name: m.DishesModalPizzaFrescaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaFrescaDescription')
+            description: m.DishesModalPizzaFrescaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaFantasiaTitle'),
+            name: m.DishesModalPizzaFantasiaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaFantasiaDescription')
+            description: m.DishesModalPizzaFantasiaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaQuattroFormaggiTitle'),
+            name: m.DishesModalPizzaQuattroFormaggiTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaQuattroFormaggiDescription')
+            description: m.DishesModalPizzaQuattroFormaggiDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaVegetarianaTitle'),
+            name: m.DishesModalPizzaVegetarianaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaVegetarianaDescription')
+            description: m.DishesModalPizzaVegetarianaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaPericolosaTitle'),
+            name: m.DishesModalPizzaPericolosaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaPericolosaDescription')
+            description: m.DishesModalPizzaPericolosaDescription()
         },
         {
-            name: $t('locale.DishesModalPizzaCrudoRucolaGranaTitle'),
+            name: m.DishesModalPizzaCrudoRucolaGranaTitle(),
             icon: "fas fa-pizza-slice",
-            description: $t('locale.DishesModalPizzaCrudoRucolaGranaDescription')
+            description: m.DishesModalPizzaCrudoRucolaGranaDescription()
         },
     ];
 
@@ -428,17 +427,17 @@
                     <div class="carousel-caption w-100 d-sm-block d-md-block d-flex align-items-center">
                         <h1 class="carousel-title pb-0 display-3 text-uppercase text-shadow text-center"
                             style="font-family: Baskervville;" data-aos="zoom-in"
-                            data-aos-duration="750">{$t('locale.SlideshowTitle')}</h1>
+                            data-aos-duration="750">{m.SlideshowTitle()}</h1>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel"
                             data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">{$t('locale.SlideshowPrevious')}</span>
+                        <span class="visually-hidden">{m.SlideshowPrevious()}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel"
                             data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">{$t('locale.SlideshowNext')}</span>
+                        <span class="visually-hidden">{m.SlideshowNext()}</span>
                     </button>
                 </div>
             </div>
@@ -451,15 +450,15 @@
                      data-aos-duration="700">
                     <div class="col-md-12 text-center mb-3 rounded-5 pt-1 shadow text-light"
                          style="background-color: #7BB5D3">
-                        <h2 class="pt-1">{$t('locale.WhoWeAreTitle')}</h2>
+                        <h2 class="pt-1">{m.WhoWeAreTitle()}</h2>
                     </div>
                     <div class="col-12 col-lg-5 p-0 p-md-auto mb-3 mb-lg-0">
                         <div class="row p-4 m-0 me-lg-3 h-100 rounded shadow" style="background-color: #F2F2F2;">
                             <div class="col-md-12 d-flex justify-content-center align-items-center text-center h-auto mb-3 rounded-5 pt-1 shadow">
-                                <h2>{$t('locale.WhoAreWeSubtitle')}</h2>
+                                <h2>{m.WhoAreWeSubtitle()}</h2>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center align-items-center px-0 px-md-auto">
-                                <p class="text-center fs-5 thin-text">{$t('locale.WhoAreWeText')}</p>
+                                <p class="text-center fs-5 thin-text">{m.WhoAreWeText()}</p>
                             </div>
                         </div>
                     </div>
@@ -480,17 +479,17 @@
                      style="background-color: #F2F2F2;">
                     <div class="col-md-12 text-center mb-3 rounded-5 pt-1 shadow text-light"
                          style="background-color: #7BB5D3">
-                        <h2>{$t('locale.DishesTitle')}</h2>
+                        <h2>{m.DishesTitle()}</h2>
                     </div>
                     {#each menuItems as item}
                         <div class="col-md-5 col-xxl-2 mx-0 mx-md-1 text-center mb-4 pt-3 rounded shadow food-bg">
-                            <i class={`fas fa-${item.icon} fa-3x p-4 pt-3 pb-3 bg-white rounded-top food-icon`}></i>
+                            <i class={`fas fa-${item.icon} fa-3x pt-3 pb-3 bg-white rounded-top food-icon`}></i>
                             <h4 class="bg-white rounded mb-0 pb-3 pt-3 shadow"
                                 style="font-family: 'Lobster', cursive;">{item.title}</h4>
                             <button type="button" class="btn btn-primary mt-3 mb-3 w-100 shadow" data-bs-toggle="modal"
                                     data-bs-target={item.modal}
                                     style="background-color: #7BB5D3; border-color: #7BB5D3; font-family: 'Roboto', sans-serif;">
-                                {$t('locale.DishesButton')}
+                                {m.DishesButton()}
                             </button>
                         </div>
                     {/each}
@@ -504,7 +503,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="wineModalLabel">{$t('locale.DishesWineTitle')}</h5>
+                        <h5 class="modal-title" id="wineModalLabel">{m.DishesWineTitle()}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -528,7 +527,7 @@
                                         {#each category.products as product}
                                             <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
                                                 <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
-                                                    <i class="{product.icon} fa-2x text-primary my-auto"
+                                                    <i class="{product.icon} fa-2x mx-auto text-primary my-auto"
                                                        style="color: #7BB5D3 !important;"></i>
                                                     <h6 class="card-title mt-1 my-auto">{product.name}</h6>
                                                 </div>
@@ -541,14 +540,14 @@
 
                         <div class="row mt-5">
                             <div class="col text-center">
-                                <p class="thin-text">{$t('locale.DishesModalDisclaimerText')}</p>
+                                <p class="thin-text">{m.DishesModalDisclaimerText()}</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer bg-gradient-primary text-white">
                         <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                                data-bs-dismiss="modal">{m.DishesModaleButtonClose()}</button>
                     </div>
                 </div>
             </div>
@@ -558,7 +557,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="saladModalLabel">{$t('locale.DishesSaladTitle')}</h5>
+                        <h5 class="modal-title" id="saladModalLabel">{m.DishesSaladsTitle()}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -566,7 +565,7 @@
                             {#each salads as salad, index}
                                 <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
                                     <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
-                                        <i class="{salad.icon} fa-2x text-primary my-auto"
+                                        <i class="{salad.icon} fa-2x mx-auto text-primary my-auto"
                                            style="color: #7BB5D3 !important;"></i>
                                         <h6 class="card-title mt-1 my-auto">{salad.name}</h6>
                                     </div>
@@ -576,14 +575,14 @@
 
                         <div class="row mt-5">
                             <div class="col text-center">
-                                <p class="thin-text">{$t('locale.DishesModalDisclaimerText')}</p>
+                                <p class="thin-text">{m.DishesModalDisclaimerText()}</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer bg-gradient-primary text-white">
                         <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                                data-bs-dismiss="modal">{m.DishesModaleButtonClose()}</button>
                     </div>
                 </div>
             </div>
@@ -594,7 +593,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="appetizerModalLabel">{$t('locale.DishesAppetizerTitle')}</h5>
+                        <h5 class="modal-title" id="appetizerModalLabel">{m.DishesAppetizersTitle()}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -602,7 +601,7 @@
                             {#each appetizers as appetizer, index}
                                 <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
                                     <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
-                                        <i class="{appetizer.icon} fa-2x text-primary my-auto"
+                                        <i class="{appetizer.icon} fa-2x mx-auto text-primary my-auto"
                                            style="color: #7BB5D3 !important;"></i>
                                         <h6 class="card-title mt-1 my-auto">{appetizer.name}</h6>
                                     </div>
@@ -612,14 +611,14 @@
 
                         <div class="row mt-5">
                             <div class="col text-center">
-                                <p class="thin-text">{$t('locale.DishesModalDisclaimerText')}</p>
+                                <p class="thin-text">{m.DishesModalDisclaimerText()}</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer bg-gradient-primary text-white">
                         <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                                data-bs-dismiss="modal">{m.DishesModaleButtonClose()}</button>
                     </div>
                 </div>
             </div>
@@ -630,7 +629,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="firstCourseModalLabel">{$t('locale.DishesFirstCourseTitle')}</h5>
+                        <h5 class="modal-title" id="firstCourseModalLabel">{m.DishesFirstCoursesTitle()}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -638,7 +637,7 @@
                             {#each firstCourses as firstCourse, index}
                                 <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
                                     <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
-                                        <i class="{firstCourse.icon} fa-2x text-primary my-auto"
+                                        <i class="{firstCourse.icon} fa-2x mx-auto text-primary my-auto"
                                            style="color: #7BB5D3 !important;"></i>
                                         <h6 class="card-title mt-1 my-auto">{firstCourse.name}</h6>
                                     </div>
@@ -648,14 +647,14 @@
 
                         <div class="row mt-5">
                             <div class="col text-center">
-                                <p class="thin-text">{$t('locale.DishesModalDisclaimerText')}</p>
+                                <p class="thin-text">{m.DishesModalDisclaimerText()}</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer bg-gradient-primary text-white">
                         <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                                data-bs-dismiss="modal">{m.DishesModaleButtonClose()}</button>
                     </div>
                 </div>
             </div>
@@ -666,7 +665,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="hamburgerModalLabel">{$t('locale.DishesHamburgerTitle')}</h5>
+                        <h5 class="modal-title" id="hamburgerModalLabel">{m.DishesHamburgersTitle()}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -674,7 +673,7 @@
                             {#each hamburgers as hamburger, index}
                                 <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
                                     <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
-                                        <i class="{hamburger.icon} fa-2x text-primary my-auto"
+                                        <i class="{hamburger.icon} fa-2x mx-auto text-primary my-auto"
                                            style="color: #7BB5D3 !important;"></i>
                                         <h6 class="card-title mt-1 my-auto">{hamburger.name}</h6>
                                     </div>
@@ -684,14 +683,14 @@
 
                         <div class="row mt-5">
                             <div class="col text-center">
-                                <p class="thin-text">{$t('locale.DishesModalDisclaimerText')}</p>
+                                <p class="thin-text">{m.DishesModalDisclaimerText()}</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer bg-gradient-primary text-white">
                         <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                                data-bs-dismiss="modal">{m.DishesModaleButtonClose()}</button>
                     </div>
                 </div>
             </div>
@@ -702,7 +701,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="secondCourseModalLabel">{$t('locale.DishesSecondCourseTitle')}</h5>
+                        <h5 class="modal-title" id="secondCourseModalLabel">{m.DishesSecondCoursesTitle()}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -710,7 +709,7 @@
                             {#each secondCourses as secondCourse, index}
                                 <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
                                     <div class="card h-100 border-0 shadow bg-white rounded-pill text-center p-3">
-                                        <i class="{secondCourse.icon} fa-2x text-primary my-auto"
+                                        <i class="{secondCourse.icon} fa-2x mx-auto text-primary my-auto"
                                            style="color: #7BB5D3 !important;"></i>
                                         <h6 class="card-title mt-1 my-auto">{secondCourse.name}</h6>
                                     </div>
@@ -720,14 +719,14 @@
 
                         <div class="row mt-5">
                             <div class="col text-center">
-                                <p class="thin-text">{$t('locale.DishesModalDisclaimerText')}</p>
+                                <p class="thin-text">{m.DishesModalDisclaimerText()}</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer bg-gradient-primary text-white">
                         <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                                data-bs-dismiss="modal">{m.DishesModaleButtonClose()}</button>
                     </div>
                 </div>
             </div>
@@ -737,7 +736,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary text-white">
-                        <h5 class="modal-title" id="pizzaModalLabel">{$t('locale.DishesPizzaTitle')}</h5>
+                        <h5 class="modal-title" id="pizzaModalLabel">{m.DishesPizzaTitle()}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-gradient-light">
@@ -745,7 +744,7 @@
                             {#each pizzas as pizza, index}
                                 <div class="col" data-aos="fade-up" data-aos-delay="{50 * index}">
                                     <div class="card h-100 border-0 shadow bg-white rounded text-center p-3">
-                                        <i class="{pizza.icon} fa-2x text-primary my-auto"
+                                        <i class="{pizza.icon} fa-2x mx-auto text-primary my-auto"
                                            style="color: #7BB5D3 !important;"></i>
                                         <h6 class="card-title mt-1 my-auto">{pizza.name}</h6>
                                         <p class="card-text my-auto thin-text">{pizza.description}</p>
@@ -756,14 +755,14 @@
 
                         <div class="row mt-5">
                             <div class="col text-center">
-                                <p class="thin-text">{$t('locale.DishesModalDisclaimerText')}</p>
+                                <p class="thin-text">{m.DishesModalDisclaimerText()}</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer bg-gradient-primary text-white">
                         <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">{$t('locale.DishesModaleButtonClose')}</button>
+                                data-bs-dismiss="modal">{m.DishesModaleButtonClose()}</button>
                     </div>
                 </div>
             </div>
@@ -799,7 +798,7 @@
                     <div class="col">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <h2>{$t('locale.ContactUsTitle')}</h2>
+                                <h2>{m.ContactUsTitle()}</h2>
                             </div>
                         </div>
                         <div class="row mt-auto mt-lg-1 justify-content-center">
@@ -813,11 +812,11 @@
                             <div class="col-md-5 d-flex flex-column align-items-center mt-4 mt-lg-auto text-center">
                                 <div class="d-flex flex-row align-items-center">
                                     <i class="fas fa-phone fa-2x mb-2" style="color: #7BB5D3;"></i>
-                                    <p class="fs-5 mt-2 text-center ms-2">{$t('locale.ContactUsBookNow')}</p>
+                                    <p class="fs-5 mt-2 text-center ms-2">{m.ContactUsBookNow()}</p>
                                 </div>
                                 <span><a class="link-body-emphasis thin-text" href="tel:+3903231991099"
                                          style="text-decoration: none;" data-bs-toggle="tooltip"
-                                         data-bs-placement="bottom" title="{$t('locale.ContactUsDialNumber')}">+39 0323 199 1099</a></span>
+                                         data-bs-placement="bottom" title="{m.ContactUsDialNumber()}">+39 0323 199 1099</a></span>
                             </div>
                         </div>
                     </div>
