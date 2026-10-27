@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/state';
-	import { locales, localizeHref, setLocale, getLocale } from '$lib/paraglide/runtime';
-	import * as m from '$lib/paraglide/messages.js';
+	import { locales, localizeHref, setLocale, getLocale } from '#lib/paraglide/runtime.js';
+	import * as m from '#lib/paraglide/messages.js';
 	import { onMount } from "svelte";
 	import 'bootstrap/dist/css/bootstrap.min.css';
 	import scriptSrc from 'bootstrap/dist/js/bootstrap.bundle.min.js?url';

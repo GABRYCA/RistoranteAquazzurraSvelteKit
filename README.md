@@ -3,7 +3,8 @@
 
 ## Developing
 
-This project uses [Bun 1.4](https://bun.sh) as runtime and package manager.
+This project uses [Bun 1.4.4](https://bun.com) as runtime and package manager, and
+[SvelteKit 3](https://svelte.dev/docs/kit) with Svelte 5 runes.
 
 Once you've cloned the project, install dependencies with `bun install` and start a development server:
 
@@ -15,11 +16,19 @@ bun run dev
 bun run dev -- --open
 ```
 
+## Checks
+
+```bash
+# Svelte/JavaScript type checking
+bun run check
+```
+
 ## Building
 
 To create a production version of your app:
 
 ```bash
+bun --bun run check
 bun --bun run build
 ```
 

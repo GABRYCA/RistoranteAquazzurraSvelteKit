@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import * as m from '$lib/paraglide/messages.js';
+    import * as m from '#lib/paraglide/messages.js';
 
     onMount(() => {
         window.$('[data-bs-toggle="tooltip"]').tooltip();

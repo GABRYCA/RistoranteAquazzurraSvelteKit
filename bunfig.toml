@@ -1,4 +1,4 @@
-# Bun 1.4 configuration — see https://bun.sh/docs/runtime/bunfig
+# Bun 1.4.4 configuration — see https://bun.sh/docs/runtime/bunfig
 [install]
 # Text-based lockfile (default since Bun 1.2, committed to git).
 saveTextLockfile = true
