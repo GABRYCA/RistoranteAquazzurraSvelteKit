@@ -12,25 +12,26 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
+		"paraglide": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide --no-emit-ts-declarations",
+		"prepare": "bun run paraglide && svelte-kit sync || echo ''",
+		"check": "bun run paraglide && svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "bun run paraglide && svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@inlang/paraglide-js": "^2.29.2",
-		"@sveltejs/adapter-static": "^4.0.0",
-		"@sveltejs/kit": "^3.1.0",
+		"@inlang/paraglide-js": "^2.29.3",
+		"@sveltejs/adapter-static": "4.0.1",
+		"@sveltejs/kit": "3.1.1",
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
 		"@types/node": "^22.20.5",
-		"svelte": "^5.57.3",
-		"svelte-check": "^4.7.7",
+		"svelte": "^5.58.0",
+		"svelte-check": "^4.7.8",
 		"typescript": "^6.0.3",
-		"vite": "^8.3.5",
+		"vite": "^8.3.8",
 		"vite-plugin-devtools-json": "^1.1.2"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^7.3.1",
-		"bootstrap": "^5.3.8"
+		"bootstrap": "^5.3.9"
 	},
 	"imports": {
 		"#lib": "./src/lib/index.js",
